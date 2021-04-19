@@ -1,0 +1,13 @@
+<?php if (Mage::getStoreConfig('ebizoptimiweincctrackingservices_config/settings/enabled')): ?>
+    <!-- wein.cc global site tag -->
+    <script async src="https://cdn.wein.cc/static/v5/x.js"></script>
+    <script>
+    // Save data into LocalStorage
+    window.weinccdata = window.weinccdata || [];
+    function weincc(){weinccdata.push(arguments);}
+    weincc({
+        'command'   : 'clickthrough', 
+        'ttl': '<?=Mage::getStoreConfig('ebizoptimiweincctrackingservices_config/settings/weinccttl')?>'
+    });
+    </script>
+<?php endif; ?>

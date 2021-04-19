@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <block type="core/template" name="weincc-global-tag" template="schneidewindit/weincc-global-tag.phtml"/>
+        </reference>
+    </default>
+    
+    <checkout_onepage_success>
+        <reference name="content">
+            <block type="checkout/onepage_success" name="weincc-checkout-success" template="schneidewindit/weincc-checkout-success.phtml" after="-"/>
+        </reference>
+    </checkout_onepage_success>
+</layout>

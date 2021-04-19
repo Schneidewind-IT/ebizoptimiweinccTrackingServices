@@ -1,0 +1,14 @@
+<?php if (Mage::getStoreConfig('ebizoptimiweincctrackingservices_config/settings/enabled') 
+        && $this->getOrderId() 
+        && $order = Mage::getModel('sales/order')->loadByIncrementId($this->getOrderId())
+    ):?>
+    <!-- wein.cc conversion tag -->
+    <script>
+    weincc({
+        'command'   : 'conversion',
+        'orderid'   : '<?=$order->getIncrementId()?>',
+        'value'     : '<?=$order->getSubtotal()?>',
+        'cur'       : '<?=$order->getOrderCurrencyCode()?>'
+    });
+    </script>
+<?php endif;?>

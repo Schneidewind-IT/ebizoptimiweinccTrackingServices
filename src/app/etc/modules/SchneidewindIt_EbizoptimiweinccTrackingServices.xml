@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SchneidewindIt_ebizoptimiweinccTrackingServices>
+            <active>true</active>
+            <codePool>community</codePool>
+        </SchneidewindIt_ebizoptimiweinccTrackingServices>
+    </modules>
+</config>
